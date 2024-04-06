@@ -1,0 +1,74 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img src="../../../assets/icons/agregar-usuario.png" alt="registro" width="100" height="100">
+                    <h1 class="text-center">Registrarse aquí</h1>
+                    <form (ngSubmit)="formSubmit()">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Nombre</mat-label>
+                            <input [(ngModel)]="user.nombre" name="nombre" matInput placeholder="Ingrese su Nombre o sus Nombres" required>
+                            
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Apellido Paterno</mat-label>
+                            <input [(ngModel)]="user.apellidoP" name="apellidoP" matInput placeholder="Ingrese su Apellido Paterno" required>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Apellido Materno</mat-label>
+                            <input [(ngModel)]="user.apellidoM" name="apellidoM" matInput placeholder="Ingrese su Apellido Materno">
+                        </mat-form-field>
+                        <mat-form-field style="padding-right: 10px;" class="quarter-width" appearance="outline">
+                            <mat-label>Calle</mat-label>
+                            <input [(ngModel)]="user.calle" name="calle" matInput placeholder="Ingrese su Calle" required>
+                        </mat-form-field>
+                        <mat-form-field style="padding-right: 10px;" class="quarter-width" appearance="outline">
+                            <mat-label>N° Interior</mat-label>
+                            <input [(ngModel)]="user.numInt" name="numInt" matInput minlength="1" maxlength="4" placeholder="Ingrese su Número interior">
+                        </mat-form-field>
+                        <mat-form-field style="padding-right: 10px;" class="quarter-width" appearance="outline">
+                            <mat-label>N° Exterior</mat-label>
+                            <input [(ngModel)]="user.numExt" name="numExte" matInput minlength="1" maxlength="4" placeholder="Ingrese su Número Exterior" required>
+                        </mat-form-field>
+                        <mat-form-field class="quarter-width" appearance="outline">
+                            <mat-label>Código Postal</mat-label>
+                            <input [(ngModel)]="user.codigoPostal" name="codigoPostal" matInput minlength="5" maxlength="5" placeholder="Ingrese su Código Postal" required>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Colonia</mat-label>
+                            <input [(ngModel)]="user.colonia" name="colonia" matInput placeholder="Ingrese su Colonia" required>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Ciudad</mat-label>
+                            <input [(ngModel)]="user.ciudad" name="ciudad" matInput placeholder="Ingrese su Ciudad" required>
+                        </mat-form-field>
+                        <mat-form-field style="padding-right: 10px;" class="mid-width" appearance="outline">
+                            <mat-label>Número de Teléfono</mat-label>
+                            <input [(ngModel)]="user.telefonoCasa" name="telefonoCasa" matInput minlength="10" maxlength="10" placeholder="Ingrese su Número Telefónico" required>
+                        </mat-form-field>
+                        <mat-form-field class="mid-width" appearance="outline">
+                            <mat-label>Número de Celular</mat-label>
+                            <input [(ngModel)]="user.telefonoMovil" name="telefonoMovil" matInput minlength="10" maxlength="10" placeholder="Ingrese su Número de Celular" required>
+                        </mat-form-field>
+                        <mat-form-field style="padding-right: 10px;" class="mid-width" appearance="outline">
+                            <mat-label>Correo Electrónico</mat-label>
+                            <input [(ngModel)]="user.email" name="email" matInput type="email" placeholder="Ingrese su Email" required>
+                        </mat-form-field>
+                        <mat-form-field class="mid-width" appearance="outline">
+                            <mat-label>Contraseña</mat-label>
+                            <input [(ngModel)]="user.password" name="password" matInput type="password" minlength="8" maxlength="16" placeholder="Ingrese su Contraseña" required>
+                        </mat-form-field>
+                        <div class="container text-center">
+                            <button mat-raised-button color="primary">Registrar</button>
+                            <button mat-raised-button style="margin-left: 20px;" color="accent">Limpiar</button>
+                        </div>
+                    </form>
+
+                    <br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
