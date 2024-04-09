@@ -10,4 +10,8 @@ export class UserService {
   public registrarUsuario(user: any){
     return this.httpClient.post(`${baseUrl}/usuarios/`,user);
   }
+
+  public obtenerRoles(){
+    return this.httpClient.get(`${baseUrl}/roles/`);
+  }
 }
