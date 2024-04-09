@@ -17,7 +17,7 @@
                         </mat-form-field>
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Apellido Materno</mat-label>
-                            <input [(ngModel)]="user.apellidoM" name="apellidoM" matInput placeholder="Ingrese su Apellido Materno">
+                            <input [(ngModel)]="user.apellidoM" name="apellidoM" matInput placeholder="Ingrese su Apellido Materno" (blur)="generarUsername()">
                         </mat-form-field>
                         <mat-form-field style="padding-right: 10px;" class="quarter-width" appearance="outline">
                             <mat-label>Calle</mat-label>
@@ -50,6 +50,18 @@
                         <mat-form-field class="mid-width" appearance="outline">
                             <mat-label>Número de Celular</mat-label>
                             <input [(ngModel)]="user.telefonoMovil" name="telefonoMovil" matInput minlength="10" maxlength="10" placeholder="Ingrese su Número de Celular" required>
+                        </mat-form-field>
+                        <mat-form-field style="padding-right: 10px;"  class="mid-width" appearance="outline">
+                            <mat-label>Tipo de Usuario</mat-label>
+                            <mat-select [(value)]="user.rol" required>
+                              <mat-option *ngFor="let rol of roles" [value]="rol.id_rol">
+                                {{ rol.nombreRol }}
+                              </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="mid-width" appearance="outline">
+                            <mat-label>Nombre de Usuario</mat-label>
+                            <input [(ngModel)]="user.username" name="username" matInput placeholder="Ingrese su Nombre de Usuario" required [disabled]="true">
                         </mat-form-field>
                         <mat-form-field style="padding-right: 10px;" class="mid-width" appearance="outline">
                             <mat-label>Correo Electrónico</mat-label>
