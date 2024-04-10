@@ -1,1 +1,30 @@
-<p>login works!</p>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                    <div class="container text-center">
+                        <img src="../../../assets/img/trabajadores_1.jpg" alt="Source Agua" width="100%" height="auto">
+                    </div>
+                    <h1 class="text-center">Inicio de Sesión</h1>
+                    <form action="">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>E-mail o Nombre de Usuario</mat-label>
+                            <input class="login" name="username" matInput placeholder="Ingrese su usuario o e-mail" required>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Contraseña</mat-label>
+                            <input class="login" name="password" matInput type="password" minlength="8" maxlength="16" placeholder="Ingrese su contraseña" required>
+                        </mat-form-field>
+                        <div class="container text-center"  style="margin-bottom: 15px;">
+                            <button mat-raised-button color="primary">Entrar</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<app-footer></app-footer>
